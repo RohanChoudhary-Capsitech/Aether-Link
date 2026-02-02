@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2061b8885cb4a74d90c2e736f9f496f, type: 3}
+  m_Name: 1
+  m_EditorClassIdentifier: 
+  gridSize: 0
+  hasTimer: 0
+  timeLimit: 60
+  showAds: 0
+  lockedCells: []
+  specialCells:
+  - row: 1
+    col: 1
+    type: 1
+  - row: 2
+    col: 3
+    type: 1
+  tilePairs:
+  - sprite: {fileID: -855298285791758126, guid: 28450fc741d1eb148b8ebf5c17e1a74e, type: 3}
+    pairCount: 1
+  - sprite: {fileID: 6937817954938267909, guid: 7cb6eb2a201cebc46beb8fa63a0df1d0, type: 3}
+    pairCount: 1
+  - sprite: {fileID: -6470460504253458178, guid: e6df0af49150a9f418fb38051af1084a, type: 3}
+    pairCount: 1
+  - sprite: {fileID: -4178046375966092550, guid: 352f582f698cb93448374e512e36017e, type: 3}
+    pairCount: 1
+  - sprite: {fileID: 4130640169021434097, guid: fb575d8d62918b047b05b4b33e3955a3, type: 3}
+    pairCount: 1
+  - sprite: {fileID: 3465286685962602723, guid: 2888c6c91cbcae449931800aecd5a3ca, type: 3}
+    pairCount: 1
+  - sprite: {fileID: 7028616704906629411, guid: 9caaed1ab4747db44a1071960f5da05c, type: 3}
+    pairCount: 1
+  - sprite: {fileID: 8288426215254106694, guid: dfa9ddcf626c07043a476863795dc461, type: 3}
+    pairCount: 0
+  - sprite: {fileID: 4113829005332862926, guid: 07cea4786e29e8a4384c8560acf3e00b, type: 3}
+    pairCount: 0
+  - sprite: {fileID: -5099292496197868168, guid: 3c52ab7b7cb3cac4ca359ee5118966f0, type: 3}
+    pairCount: 0
+  - sprite: {fileID: -2966200626249415253, guid: 087dda164084a474c8c62b92390d77ac, type: 3}
+    pairCount: 0
+  - sprite: {fileID: -1540426309290004842, guid: 6b631b2347bd20e45b0d908abd704d02, type: 3}
+    pairCount: 0
+  - sprite: {fileID: 2090518630, guid: b1079c7e57feea64785671e910700902, type: 3}
+    pairCount: 0
+  - sprite: {fileID: -2032716003, guid: b1079c7e57feea64785671e910700902, type: 3}
+    pairCount: 0
+  - sprite: {fileID: 190727781, guid: b1079c7e57feea64785671e910700902, type: 3}
+    pairCount: 0
+  - sprite: {fileID: 713616763, guid: b1079c7e57feea64785671e910700902, type: 3}
+    pairCount: 0
