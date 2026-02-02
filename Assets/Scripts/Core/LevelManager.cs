@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private List<LevelData> levels;
     // [SerializeField] private GameObject TimerUIObject;
     [SerializeField] private GameObject LevelsButton;
+    [SerializeField] private GameObject GameLosePanel;
 
     private int currentLevelIndex = 0;
     private LevelData currentLevelData;
@@ -48,7 +49,7 @@ public class LevelManager : MonoBehaviour
 
             if (levelTimer <= 0)
             {
-                Debug.Log("⏰ TIME UP!");
+                // GameLosePanel.SetActive(true);
                 OnGameOver();
             }
         }
@@ -162,11 +163,16 @@ public class LevelManager : MonoBehaviour
     public void OnGameOver()
     {
         isLevelActive = false;
+        
         LevelsButton.SetActive(false);
+        
         // TimerUIObject.SetActive(false);
+
+        // TimerUIObject.SetActive(false);
+
         Debug.Log("Game Over");
-        if (GameOverPanel.gameOverPanel != null) 
-            GameOverPanel.gameOverPanel.Show();
+        if (GameLosePanel != null) 
+            GameLosePanel.SetActive(true);
     }
    
 

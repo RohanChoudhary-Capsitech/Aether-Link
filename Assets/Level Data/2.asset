@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridSize: 1
   hasTimer: 1
-  timeLimit: 120
+  timeLimit: 2
   showAds: 0
   lockedCells: []
   specialCells:
