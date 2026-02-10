@@ -1,0 +1,114 @@
+{
+  "1": {
+    "en": "Play",
+    "pt-BR": "Jogar",
+    "ru": "Играть",
+    "sp": "Jugar",
+    "fr": "Jouer",
+    "ar": "العب"
+  },
+  "LEVEL": {
+    "en": "Level",
+    "pt-BR": "Nível",
+    "ru": "Уровень",
+    "sp": "Nivel",
+    "fr": "Niveau",
+    "ar": "المستوى"
+  },
+  "RESUME": {
+    "en": "Resume",
+    "pt-BR": "Continuar",
+    "ru": "Продолжить",
+    "sp": "Reanudar",
+    "fr": "Reprendre",
+    "ar": "استئناف"
+  },
+  "HOME": {
+    "en": "Home",
+    "pt-BR": "Início",
+    "ru": "Главная",
+    "sp": "Inicio",
+    "fr": "Accueil",
+    "ar": "الرئيسية"
+  },
+  "SETTINGS": {
+    "en": "Settings",
+    "pt-BR": "Configurações",
+    "ru": "Настройки",
+    "sp": "Configuración",
+    "fr": "Paramètres",
+    "ar": "الإعدادات"
+  },
+  "PAUSED": {
+    "en": "Paused",
+    "pt-BR": "Pausado",
+    "ru": "Пауза",
+    "sp": "Pausado",
+    "fr": "En pause",
+    "ar": "متوقف مؤقتًا"
+  },
+  "MUSIC": {
+    "en": "Music",
+    "pt-BR": "Música",
+    "ru": "Музыка",
+    "sp": "Música",
+    "fr": "Musique",
+    "ar": "الموسيقى"
+  },
+  "SOUND": {
+    "en": "Sound",
+    "pt-BR": "Som",
+    "ru": "Звук",
+    "sp": "Sonido",
+    "fr": "Son",
+    "ar": "الصوت"
+  },
+  "ON": {
+    "en": "On",
+    "pt-BR": "Ligado",
+    "ru": "Вкл",
+    "sp": "Encendido",
+    "fr": "Activé",
+    "ar": "تشغيل"
+  },
+  "OFF": {
+    "en": "Off",
+    "pt-BR": "Desligado",
+    "ru": "Выкл",
+    "sp": "Apagado",
+    "fr": "Désactivé",
+    "ar": "إيقاف"
+  },
+  "LANGUAGE": {
+    "en": "Language",
+    "pt-BR": "Idioma",
+    "ru": "Язык",
+    "sp": "Idioma",
+    "fr": "Langue",
+    "ar": "اللغة"
+  },
+  "FAILED": {
+    "en": "Failed",
+    "pt-BR": "Falhou",
+    "ru": "Неудача",
+    "sp": "Fallido",
+    "fr": "Échoué",
+    "ar": "فشل"
+  },
+  "RETRY": {
+    "en": "Retry",
+    "pt-BR": "Tentar novamente",
+    "ru": "Повторить",
+    "sp": "Reintentar",
+    "fr": "Réessayer",
+    "ar": "إعادة المحاولة"
+  },
+  "COMPLETE": {
+    "en": "Complete",
+    "pt-BR": "Concluído",
+    "ru": "Завершено",
+    "sp": "Completado",
+    "fr": "Terminé",
+    "ar": "مكتمل"
+  }
+}

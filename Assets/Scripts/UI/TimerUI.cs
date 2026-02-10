@@ -10,45 +10,50 @@ public class TimerUI : MonoBehaviour
     [SerializeField] private GameObject inactiveTimerPlaceholder;
 
     private float totalTime = 1f;
+    private float remainingTime;
+    
 
     private void Awake()
     {
         if (Instance == null)
-        {
             Instance = this;
-        }
         else
-        {
             Destroy(gameObject);
-        }
     }
 
     public void EnableTimer(bool enable)
     {
-        if (activeTimerContainer != null)
-            activeTimerContainer.SetActive(enable);
-
-        if (inactiveTimerPlaceholder != null)
-            inactiveTimerPlaceholder.SetActive(!enable);
+        activeTimerContainer?.SetActive(enable);
+        inactiveTimerPlaceholder?.SetActive(!enable);
     }
 
-    /// <summary>
-    /// Call this ONCE when the timer starts
-    /// </summary>
     public void SetTotalTime(float time)
     {
         totalTime = Mathf.Max(1f, time);
-        UpdateTime(time);
+        remainingTime = totalTime;
+        UpdateFill();
+    }
+
+    public void UpdateTime(float timeLeft)
+    {
+        remainingTime = Mathf.Clamp(timeLeft, 0f, totalTime);
+        UpdateFill();
     }
 
     /// <summary>
-    /// Call this every frame / tick with remaining time
+    /// Power-up: adds time instantly
+    /// Can be called anytime
     /// </summary>
-    public void UpdateTime(float remainingTime)
+    public void AddTime(float extraTime)
+    {
+        remainingTime += extraTime;
+        remainingTime = Mathf.Clamp(remainingTime, 0f, totalTime);
+        UpdateFill();
+    }
+
+    private void UpdateFill()
     {
         if (timerFillImage == null) return;
-
-        remainingTime = Mathf.Clamp(remainingTime, 0f, totalTime);
         timerFillImage.fillAmount = remainingTime / totalTime;
     }
 }

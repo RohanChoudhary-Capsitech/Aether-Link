@@ -439,6 +439,34 @@ availableHeight = Mathf.Max(0, availableHeight);
         }
     }
 
+    public void RemovePairs(int count)
+    {
+        for (int k = 0; k < count; k++)
+        {
+            if (TryGetValidMove(out Cell a, out Cell b))
+            {
+                // Visual effect? Lightning? For now just clear.
+                // We need to trigger the line drawer or some effect ideally, but request says "Remove".
+                // Let's clear them directly.
+                
+                // Add particles or effect here if needed
+                
+                a.Clear();
+                b.Clear();
+                
+                // Trigger pair cleared logic (score, unlock, deadlock check)
+                OnPairCleared();
+                
+                Debug.Log($"💥 PowerUp Removed Pair: {a.row},{a.col} & {b.row},{b.col}");
+            }
+            else
+            {
+                Debug.Log("🤷 No more pairs to remove!");
+                break;
+            }
+        }
+    }
+
     public bool TryGetValidMove(out Cell start, out Cell end)
     {
         start = null;

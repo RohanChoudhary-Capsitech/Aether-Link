@@ -1,0 +1,38 @@
+Generate ONLY valid JSON for a game localization file.
+
+Constraints:
+- No markdown
+- No comments
+- No explanations
+- No trailing commas
+- Preserve key order
+- Use uppercase keys
+
+Structure:
+{
+  "KEY": {
+    "en": "English",
+    "pt-BR": "Portuguese (Brazil)",
+    "ru": "Russian",
+    "sp": "Spanish",
+    "fr": "French",
+    "ar": "Arabic"
+  }
+}
+
+Entries:
+
+PLAY = Play
+LEVEL = Level
+PAUSED = Paused
+SETTINGS = Settings
+HOME = Home
+RESUME = Resume
+LANGUAGE = Language
+ENGLISH = English
+MUSIC = Music
+ON = ON
+SOUND = Sound
+FAILED = Failed
+RETRY = Retry
+COMPLETE = Complete

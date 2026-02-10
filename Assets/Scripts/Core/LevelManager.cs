@@ -31,15 +31,30 @@ public class LevelManager : MonoBehaviour
         // LoadLevel(0);
     }
     
+    private float freezeTimerDuration;
+    private float highlightCooldown;
+
     void Update()
     {
         if (!isLevelActive) return;
+
+        // Cooldowns
+        if (highlightCooldown > 0) highlightCooldown -= Time.deltaTime;
 
         if (currentLevelData != null && currentLevelData.HasTimer())
         {
             if (!timerStarted) return;
 
-            levelTimer -= Time.deltaTime;
+            if (freezeTimerDuration > 0)
+            {
+                freezeTimerDuration -= Time.deltaTime;
+                // Debug.Log($"❄️ Frozen! {freezeTimerDuration:F1}");
+            }
+            else
+            {
+                levelTimer -= Time.deltaTime;
+            }
+
             // Debug.Log($"⏳ Time: {levelTimer:F1}"); // Verified mechanic
 
             if (TimerUI.Instance != null)
@@ -153,7 +168,7 @@ public class LevelManager : MonoBehaviour
         LevelsButton.SetActive(false);
         //TimerUIObject.SetActive(false);
         LevelSelectPanel.Instance.Show();
-        // 🔥 Refresh all level buttons
+        //  Refresh all level buttons
         foreach (LevelButton btn in FindObjectsOfType<LevelButton>())
         {
              if(btn != null) btn.Refresh();
@@ -175,5 +190,36 @@ public class LevelManager : MonoBehaviour
             GameLosePanel.SetActive(true);
     }
    
+
+    public void TimeAddonPowerUp(){
+        if (currentLevelData != null && currentLevelData.HasTimer())
+        {
+            levelTimer += 5f;
+            if (TimerUI.Instance != null)
+            {
+                TimerUI.Instance.UpdateTime(levelTimer);
+            }
+            Debug.Log($"⏳ PowerUp Applied: +5s. New Time: {levelTimer}");
+        }
+    }
+
+    public void PairHighlightPowerUp(){
+        if (highlightCooldown > 0) return;
+        
+        GridManager.Instance.ShowHint();
+        highlightCooldown = 3f; // slightly longer than animation
+    }
+
+    public void TimeFreezePowerUp(){
+        if (freezeTimerDuration > 0) return;
+
+        freezeTimerDuration = 5f;
+        Debug.Log("❄️ Timer Frozen for 5 seconds!");
+    }
+
+    public void TileRemovePowerUp(){
+        // Remove 2 pairs (4 tiles)
+        GridManager.Instance.RemovePairs(2);
+    }
 
 }

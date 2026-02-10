@@ -156,8 +156,8 @@ public class Cell : MonoBehaviour
         float duration = 0.5f;
         float elapsed = 0f;
 
-        // Pulse twice
-        for(int i=0; i<2; i++)
+        // Pulse 5 times (0.5s * 5 = 2.5s)
+        for(int i=0; i<5; i++)
         {
             elapsed = 0f;
             while (elapsed < duration)
